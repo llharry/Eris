@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+$title-font-family: 'Raleway', sans-serif;
+
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+$body-font-family: 'Noto Sans', sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=VT323');
+$mono-font-family: 'VT323', monospace;
+
+$default-padding: 6px 12px;
+
+body{
+    font-family: $body-font-family;
+    line-height: 1.3em;
+}
+a{
+    text-decoration: none;
+}
+p,ol,ul,address,img,h1,h2,h3,h4,h5,h6{
+    padding: $default-padding;
+    font-family: $title-font-family;
+}
+
+blockquote{
+    margin: $default-padding;
+}
+h1,h2,h3,h4,h5,h6{
+    line-height: 1em;
+}
+h1{
+    font-size:2.8em;
+    font-weight: bold;
+}
+h2{
+    font-size:2.4em;
+}
+h3{
+    font-size:2.1em;
+}
+h4{
+    font-size:1.8em;
+}
+h5{
+    font-size:1.5em;
+}
+h6{
+    font-size:1.2em;
+}
+p{
+
+}
+
+blockquote{
+    background-color: color-level('foreground',5);
+    border-left: 15px solid color('accent');
+    border-right: 2px solid color('accent');
+    display:block;
+    padding: 15px 20px 15px 45px;
+    margin: 0 0 20px;
+    position:relative;
+
+    box-shadow: 2px 2px 15px #ccc;
+
+
+    footer{
+        padding: $default-padding;
+    }
+}
+
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:30px;
+}
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+
+
+strong,b{
+    font-weight: bold;
+}
+em,i{
+    font-style: italic;
+}
+
+cite{
+    font-size: 0.65em;
+    vertical-align: top;
+}
+
+code{
+    font-family: $mono-font-family;
+    font-size: 1.2em;
+}
+
+
+
+
+//TABLES
+
+table{
+    th,td{
+        padding: $default-padding;
+    }
+    thead,tfoot{
+        background-color: color-level('primary', -4);
+        color: #fff;
+
+    }
+    tbody{
+        tr{
+            background-color: color-level('accent', 8);
+        }
+        tr:nth-child(2n){
+            background-color: color-level('accent', 5);
+        }
+    }
+}
+
+
+//LISTS
+
+ol{
+    list-style: lower-latin;
+}
+ul{
+    list-style: initial;
+}
+
+
+
+
+
+//LINKS
+
+a{
+    color: color('accent');
+    transition: 0.5s color;
+    &:hover{
+        color: mix(color('accent'),color('bodytext'),50);
+    }
+}

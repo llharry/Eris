@@ -1,0 +1,60 @@
+//https://scotch.io/tutorials/aesthetic-sass-2-colors
+
+$color-interval: 10%;
+
+$color-map: (
+    'bodytext': #111,
+    'bodyinvert': #fff,
+    'primary': #0E48CC,
+    'accent': #2383cf,
+    'secondary': #6FAFE1,
+    'foreground': #eee,
+    'background': #111111
+);
+
+$opacity-map: (
+    'light': 0.8, // opacity used with lighter colors
+    'dark': 0.4   // opacity used with darker colors
+);
+
+
+
+@function color($key: 'primary') {
+  @return map-get($color-map, $key);
+}
+
+
+
+
+
+@function color-alpha($name: 'primary', $opacity: 0) {
+    $color: color($name);
+
+    // Get the named opacity level, if it exists
+    @if map-key-exists($opacity-map, $opacity) {
+        $opacity: map-get($opacity-map, $opacity);
+    }
+
+    // Use rgba() to manipulate the color's alpha level
+    @return rgba($color, $opacity);
+}
+
+// Example usage:
+//$button-transparent-color: color-alpha('primary', 'light');
+
+
+
+@function color-level($color-name: 'primary', $level: 0) {
+  $color: color($color-name);
+  $color-base: #fff;
+  @if $level < 0{ //oh shit we going down
+      $color-base: #000;
+      $level: -1 * $level; //make level positive so the mix function doesnt cry blood.
+  }
+
+
+  @return mix($color-base, $color, $level * $color-interval);
+}
+//Ex:
+//$sometint: color-level('primary', 2);
+//$someothertint: color-level('primary', -5);

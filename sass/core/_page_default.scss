@@ -1,0 +1,161 @@
+body{
+    background-color: color('background');
+}
+
+//NAVIGATION
+$nav-height: 50px;
+.nav{
+    @include col(1);
+    background-color: color-level('primary', -6);
+    .menu{
+        ul{
+            padding: 0;
+            list-style: none;
+            li{
+                display:inline-block;
+                line-height: $nav-height;
+                height: $nav-height;
+                a{
+                    display: block;
+                    padding: 0 20px;
+                    font-size: 13pt;
+                }
+            }
+        }
+    }
+}
+.nav_desktop{
+    @include breakpoint(to-phablet){
+        display: none;
+    }
+    .menu{
+        ul{
+            li{
+                $menu-border: none;
+                border-left: $menu-border;
+                &:last-child{
+                    border-right: $menu-border;
+                }
+
+                a{
+                }
+            }
+        }
+    }
+}
+.nav_mobile{
+
+    @include breakpoint(from-tablet){
+        display: none;
+    }
+    .menubar{
+        height: $nav-height;
+        transition: 0.5s background-color, 0.5s color;
+        &:hover{
+            cursor: pointer;
+            background-color: color('accent');
+            #menu-text{
+                color: mix(color('accent'),color('bodytext'),50);
+            }
+        }
+        #menu-button-container{
+            border: none;
+            height: $nav-height;
+            padding: 0;
+            padding-left: 20px;
+            display: inline-block;
+            float: left;
+            div{
+                @include burger(25px, 3px, 5px, color-level('accent',4));
+                margin-top: 24px; //probably half of the height take away the second value in burger(), or close to it.
+
+            }
+        }
+        #menu-text{
+
+            height: $nav-height;
+            line-height: $nav-height;
+            display:inline-block;
+            float: left;
+            padding: 0;
+            padding-left: .5em;
+            margin: 0;
+            color: color('accent');
+
+        }
+
+
+    }
+    #nav-dropdown{
+        width: 100%;
+        float: left;
+        ul{
+            li{
+                width: 100%;
+                float: left;
+                $menu-border: color('secondary') 2px solid;;
+                border-top: $menu-border;
+                &:last-child{
+                    border-bottom: $menu-border;
+                }
+                a{
+
+                    display: block;
+                    transition: 0.5s background-color;
+                    &:hover{
+                        background-color: color('accent')
+                    }
+                }
+            }
+        }
+    }
+    #nav-dropdown.inactive{
+        display:none;
+    }
+}
+
+//END NAVIGATION
+
+.content{
+    .title{
+        margin-top: 6px;
+        background-color: color('secondary');
+        padding: $default-padding;
+        color: color('bodyinvert');
+    }
+    @include col(1);
+    background-color: color('foreground');
+    .pageContent{
+            padding: 12px;
+    }
+}
+
+
+
+//FOOTER
+
+.footerBar{
+    background-color: color('background');
+    color: color('body-invert');
+    @include col(4,$margin: 6px);
+    padding: 12px;
+    padding-top: 36px;
+    @include breakpoint('phablet'){
+        @include col(2, $margin:6px);
+    }
+    @include breakpoint('mobile'){
+        @include col(1, $margin:6px);
+    }
+    .footerWidget{
+        padding: 10px;
+        color: color('bodyinvert');
+    }
+}
+.copyrightBar{
+    @include col(1);
+    text-align: center;
+    color: color('bodyinvert');
+    opacity: 0.6;
+}
+
+//END FOOTER

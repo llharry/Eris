@@ -1,0 +1,22 @@
+body{
+    overflow-x: hidden;
+}
+
+
+
+//core
+@import "core/helpers";
+@import "vendor/reset";
+@import "vendor/neutron";//Grid system
+
+
+//vendor
+@import "vendor/burger";
+
+
+///styling
+@import "style/colors";
+@import "style/images";
+@import "style/typography";
+@import "core/page_default";
+@import "style/pageSpecific";
