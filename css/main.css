@@ -413,6 +413,15 @@ body {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 40vh;
   background-image: url("http://placehold.it/1400x1000");
   background-size: cover;
@@ -427,4 +436,10 @@ body {
     clear: left;
     margin-left: 0;
     margin-right: 0; }
+  .homepage .heroBar .heroText {
+    text-align: center; }
+    .homepage .heroBar .heroText h1 {
+      color: #fff; }
+    .homepage .heroBar .heroText .subtitle {
+      color: #bddaf1; }
 /*# sourceMappingURL=main.css.map */

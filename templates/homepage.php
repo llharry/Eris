@@ -12,7 +12,10 @@ if (have_posts()) {
 ?>
 <div class="homepage">
     <section class="heroBar">
-
+        <div class="heroText">
+            <h1>Eris</h1>
+            <h2 class="subtitle">Satellite of Pluto.</h2>
+        </div>
     </section>
     <section class="ctaBar">
 

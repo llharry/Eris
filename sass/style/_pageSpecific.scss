@@ -1,10 +1,20 @@
 .homepage{
     .heroBar{
         @include col(1);
+        @include centerChildren;
         height: 40vh;
         background-image: url('http://placehold.it/1400x1000');
         background-size: cover;
         background-position: center;
+        .heroText{
+            text-align: center;
+            h1{
+                color: color('bodyinvert');
+            }
+            .subtitle{
+                color: color-level('accent',7);
+            }
+        }
     }
     .ctaBar{
 
