@@ -1,5 +1,5 @@
     <section class="footerBar">
-        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("footer-widget-area") ) : ?>
+        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("footer_widget_area") ) : ?>
 <?php endif;?>
     </section>
     <section class="copyrightBar">

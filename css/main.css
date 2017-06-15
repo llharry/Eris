@@ -61,7 +61,8 @@ html * {
   box-sizing: inherit; }
 
 body {
-  max-width: 960px;
+  width: 100%;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
 
@@ -180,6 +181,21 @@ a {
 
 body {
   background-color: #111111; }
+
+.headerBar {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto; }
+  .headerBar:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .headerBar > div:nth-of-type(1n+1) {
+    width: calc(100%);
+    float: left;
+    clear: left;
+    margin-left: 0;
+    margin-right: 0; }
 
 .nav {
   max-width: 960px;
@@ -408,4 +424,87 @@ body {
     clear: left;
     margin-left: 0;
     margin-right: 0; }
+
+.homepage .heroBar {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40vh;
+  background-image: url("http://placehold.it/1400x1000");
+  background-size: cover;
+  background-position: center; }
+  .homepage .heroBar:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .homepage .heroBar > *:nth-child(1n+1) {
+    width: calc(100%);
+    float: left;
+    clear: left;
+    margin-left: 0;
+    margin-right: 0; }
+  .homepage .heroBar .heroText {
+    text-align: center; }
+    .homepage .heroBar .heroText h1 {
+      color: #fff; }
+    .homepage .heroBar .heroText .subtitle {
+      color: #bddaf1; }
+
+.homepage .ctaBar {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff; }
+  .homepage .ctaBar:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .homepage .ctaBar > *:nth-child(3n+1) {
+    width: calc(33.3333333333% - 10px - 10px + 3.3333333333px + 3.3333333333px);
+    float: left;
+    margin: 10px;
+    clear: left;
+    margin-left: 0; }
+  .homepage .ctaBar > *:nth-child(3n+2) {
+    width: calc(33.3333333333% - 10px - 10px + 3.3333333333px + 3.3333333333px);
+    float: left;
+    margin: 10px;
+    clear: none; }
+  .homepage .ctaBar > *:nth-child(3n+3) {
+    width: calc(33.3333333333% - 10px - 10px + 3.3333333333px + 3.3333333333px);
+    float: left;
+    margin: 10px;
+    clear: none;
+    margin-right: 0; }
+  .homepage .ctaBar .ctaWidget {
+    padding-top: 24px;
+    padding-bottom: 12px;
+    text-align: center; }
+
+.homepage .contentBar {
+  background-color: #eee; }
+  .homepage .contentBar .contentWidget {
+    padding: 24px 0;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto; }
+    .homepage .contentBar .contentWidget:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .homepage .contentBar .contentWidget > *:nth-child(1n+1) {
+      width: calc(100%);
+      float: left;
+      clear: left;
+      margin-left: 0;
+      margin-right: 0; }
 /*# sourceMappingURL=main.css.map */

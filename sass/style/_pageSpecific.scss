@@ -1,0 +1,38 @@
+.homepage{
+    .heroBar{
+        @include col(1);
+        @include centerChildren;
+        height: 40vh;
+        background-image: url('http://placehold.it/1400x1000');
+        background-size: cover;
+        background-position: center;
+        .heroText{
+            text-align: center;
+            h1{
+                color: color('bodyinvert');
+            }
+            .subtitle{
+                color: color-level('accent',7);
+            }
+        }
+    }
+    .ctaBar{
+        @include col(3, $margin: 10px);
+        color: color('bodyinvert');
+        .ctaWidget{
+            padding-top: 24px;
+            padding-bottom: 12px;
+            text-align: center;
+            h4{
+
+            }
+        }
+    }
+    .contentBar{
+        background-color: color('foreground');
+        .contentWidget{
+            padding: 24px 0;
+            @include col(1);
+        }
+    }
+}
