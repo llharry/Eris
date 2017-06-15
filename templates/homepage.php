@@ -10,7 +10,7 @@ get_header(); ?>
 if (have_posts()) {
     while (have_posts()) {the_post();
 ?>
-<div class="homepage">
+<section class="homepage">
     <section class="heroBar">
         <div class="heroText">
             <h1>Eris</h1>
@@ -18,12 +18,13 @@ if (have_posts()) {
         </div>
     </section>
     <section class="ctaBar">
-
+        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("homepage_cta_widget_area") ) : ?>
+<?php endif;?>
     </section>
     <section class="contentBar">
 
     </section>
-</div>
+</section>
 <?php                     }
                 } ?>
 <?php //get_sidebar(); ?>

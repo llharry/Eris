@@ -442,4 +442,34 @@ body {
       color: #fff; }
     .homepage .heroBar .heroText .subtitle {
       color: #bddaf1; }
+
+.homepage .ctaBar {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff; }
+  .homepage .ctaBar:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .homepage .ctaBar > *:nth-child(3n+1) {
+    width: calc(33.3333333333% - 10px - 10px + 3.3333333333px + 3.3333333333px);
+    float: left;
+    margin: 10px;
+    clear: left;
+    margin-left: 0; }
+  .homepage .ctaBar > *:nth-child(3n+2) {
+    width: calc(33.3333333333% - 10px - 10px + 3.3333333333px + 3.3333333333px);
+    float: left;
+    margin: 10px;
+    clear: none; }
+  .homepage .ctaBar > *:nth-child(3n+3) {
+    width: calc(33.3333333333% - 10px - 10px + 3.3333333333px + 3.3333333333px);
+    float: left;
+    margin: 10px;
+    clear: none;
+    margin-right: 0; }
+  .homepage .ctaBar .ctaWidget {
+    padding-top: 24px;
+    text-align: center; }
 /*# sourceMappingURL=main.css.map */
