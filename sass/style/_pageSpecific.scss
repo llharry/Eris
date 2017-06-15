@@ -21,6 +21,7 @@
         color: color('bodyinvert');
         .ctaWidget{
             padding-top: 24px;
+            padding-bottom: 12px;
             text-align: center;
             h4{
 
@@ -28,6 +29,10 @@
         }
     }
     .contentBar{
-
+        background-color: color('foreground');
+        .contentWidget{
+            padding: 24px 0;
+            @include col(1);
+        }
     }
 }

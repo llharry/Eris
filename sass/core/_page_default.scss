@@ -2,6 +2,10 @@ body{
     background-color: color('background');
 }
 
+.headerBar{
+    @include col(1,$target: 'div');
+}
+
 //NAVIGATION
 $nav-height: 50px;
 .nav{

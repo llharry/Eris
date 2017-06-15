@@ -22,7 +22,13 @@ if (have_posts()) {
 <?php endif;?>
     </section>
     <section class="contentBar">
-
+        <div class="contentWidget">
+            <?php the_content() ?>
+        </div>
+    </section>
+    <section class="accoladesBar">
+        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("homepage_accolades_area") ) : ?>
+<?php endif;?>
     </section>
 </section>
 <?php                     }

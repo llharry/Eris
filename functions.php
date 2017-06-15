@@ -35,6 +35,15 @@ if (function_exists('register_sidebar')) {
 		'before_title'  => '<h4>',
 		'after_title'   => '</h4>'
 	));
+    register_sidebar(array(
+		'name' => 'Homepage Accolades Area',
+		'id'   => 'homepage_accolades_area',
+		'description'   => 'These widgets will show up in the accolades bar on the homepage.',
+		'before_widget' => '<div id="%1$s" class="widget footerWidget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>'
+	));
 
 }
 ?>
