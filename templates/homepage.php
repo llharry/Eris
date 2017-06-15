@@ -1,18 +1,26 @@
 <?php
+/**
+ * Template Name: Homepage - Default
+ */
+?>
+<?php
 // Gets header.php
 get_header(); ?>
 <?php /*get posts*/
 if (have_posts()) {
     while (have_posts()) {the_post();
 ?>
-<section class="content">
-    <div class="title">
-        <h1><?php the_title() ?></h1>
-    </div>
-    <div class="pageContent">
-        <?php the_content();?>
-    </div>
-</section>
+<div class="homepage">
+    <section class="heroBar">
+
+    </section>
+    <section class="ctaBar">
+
+    </section>
+    <section class="contentBar">
+
+    </section>
+</div>
 <?php                     }
                 } ?>
 <?php //get_sidebar(); ?>

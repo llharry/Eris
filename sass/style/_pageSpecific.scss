@@ -1,0 +1,15 @@
+.homepage{
+    .heroBar{
+        @include col(1);
+        height: 40vh;
+        background-image: url('http://placehold.it/1400x1000');
+        background-size: cover;
+        background-position: center;
+    }
+    .ctaBar{
+
+    }
+    .contentBar{
+
+    }
+}
