@@ -7,7 +7,7 @@
 		"uuidString": "82E33F93-A814-4F1B-87D6-600498F322B7"
 		}
 	],
-"creatorBuild": "25813",
+"creatorBuild": "25849",
 "files": {
 	"\/css\/main.css": {
 		"aP": 1,
@@ -37,6 +37,12 @@
 		"oAP": "\/functions.php",
 		"oF": 0
 		},
+	"\/header-empty.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/header-empty.php",
+		"oF": 0
+		},
 	"\/header.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -63,6 +69,15 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/min\/responsive-menu-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/scripts.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/scripts-min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -2213,6 +2228,7 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",

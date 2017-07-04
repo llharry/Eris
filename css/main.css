@@ -61,7 +61,7 @@ html * {
   box-sizing: inherit; }
 
 body {
-  max-width: 960px;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -173,7 +173,6 @@ ul {
 
 a {
   color: #2383cf;
-  -webkit-transition: 0.5s color;
   transition: 0.5s color; }
   a:hover {
     color: #1a4a70; }
@@ -182,7 +181,7 @@ body {
   background-color: #111111; }
 
 .nav {
-  max-width: 960px;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
   background-color: #061d52; }
@@ -223,7 +222,6 @@ body {
 
 .nav_mobile .menubar {
   height: 50px;
-  -webkit-transition: 0.5s background-color, 0.5s color;
   transition: 0.5s background-color, 0.5s color; }
   .nav_mobile .menubar:hover {
     cursor: pointer;
@@ -252,11 +250,9 @@ body {
         height: 3px;
         background-color: #7bb5e2;
         outline: 1px solid transparent;
-        -webkit-transition-property: background-color, -webkit-transform;
         transition-property: background-color, -webkit-transform;
         transition-property: background-color, transform;
         transition-property: background-color, transform, -webkit-transform;
-        -webkit-transition-duration: 0.3s;
         transition-duration: 0.3s; }
       .nav_mobile .menubar #menu-button-container div::before, .nav_mobile .menubar #menu-button-container div::after {
         position: absolute;
@@ -286,7 +282,6 @@ body {
       border-bottom: #6FAFE1 2px solid; }
     .nav_mobile #nav-dropdown ul li a {
       display: block;
-      -webkit-transition: 0.5s background-color;
       transition: 0.5s background-color; }
       .nav_mobile #nav-dropdown ul li a:hover {
         background-color: #2383cf; }
@@ -295,7 +290,7 @@ body {
   display: none; }
 
 .content {
-  max-width: 960px;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
   background-color: #eee; }
@@ -319,7 +314,7 @@ body {
 
 .footerBar {
   background-color: #111111;
-  max-width: 960px;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
   padding: 12px;
@@ -352,7 +347,7 @@ body {
     margin-right: 0; }
   @media (min-width: 480px) and (max-width: 767px) {
     .footerBar {
-      max-width: 960px;
+      max-width: 1300px;
       margin-left: auto;
       margin-right: auto; }
       .footerBar:after {
@@ -373,7 +368,7 @@ body {
         margin-right: 0; } }
   @media (max-width: 479px) {
     .footerBar {
-      max-width: 960px;
+      max-width: 1300px;
       margin-left: auto;
       margin-right: auto; }
       .footerBar:after {
@@ -392,7 +387,7 @@ body {
     color: #fff; }
 
 .copyrightBar {
-  max-width: 960px;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -408,4 +403,41 @@ body {
     clear: left;
     margin-left: 0;
     margin-right: 0; }
+
+.gallery {
+  width: 100%; }
+  .gallery .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .gallery .row .col {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto;
+      text-align: center; }
+
+.contactForm .inputs input, .contactForm .inputs textarea {
+  height: 3em;
+  border: none;
+  font-family: "Noto Sans", sans-serif;
+  width: 100%;
+  font-size: 1em;
+  padding: 12px;
+  border: #111111 solid 2px;
+  transition: 0.5s border-color, 0.5s background-color; }
+  .contactForm .inputs input:hover, .contactForm .inputs textarea:hover {
+    border-color: #6FAFE1;
+    background-color: #bebebe; }
+
+.contactForm .inputs textarea {
+  resize: none; }
+
+.contactForm .submission .submit {
+  text-align: center; }
 /*# sourceMappingURL=main.css.map */

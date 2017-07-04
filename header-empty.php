@@ -21,24 +21,3 @@
 <?php wp_head(); ?>
 </head>
 <body>
-    <section class="headerBar">
-        <img src="http://placehold.it/300x120" />
-    </section>
-    <section class="nav nav_desktop">
-        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-    </section>
-    <section class="nav nav_mobile">
-        <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/min/responsive-menu-min.js"></script>
-        <div onclick="toggleMenu()" class="menubar">
-            <div id="menu-button-container">
-                <div>
-                </div>
-            </div>
-            <p id="menu-text">
-                Menu
-            </p>
-        </div>
-        <div id="nav-dropdown" class="inactive">
-            <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-        </div>
-    </section>

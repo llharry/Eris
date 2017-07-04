@@ -159,3 +159,52 @@ $nav-height: 50px;
 }
 
 //END FOOTER
+
+
+
+
+//Objects
+.gallery{
+    width: 100%;
+    .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .col{
+            flex: 1 1 auto;
+            text-align: center;
+        }
+    }
+}
+
+//Form
+.contactForm{
+    .inputs{
+        input,textarea{
+            height: 3em;
+            border: none;
+            font-family: $body-font-family;
+            width: 100%;
+            font-size: 1em;
+
+            padding: 12px;
+            border: color('background') solid 2px;
+
+            transition: 0.5s border-color, 0.5s background-color;
+            &:hover{
+                border-color: color('secondary');
+                background-color: color-level('foreground', -2);
+            }
+        }
+        input{
+        }
+        textarea{
+            resize: none;
+        }
+    }
+    .submission{
+        .submit{
+            text-align: center;
+        }
+    }
+}
