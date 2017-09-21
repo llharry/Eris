@@ -19,24 +19,29 @@ $opacity-map: (
 
 
 
-@function color($key: 'primary') {
-  @return map-get($color-map, $key);
+@function color($key: 'primary', $level: 0, $opacity: 1) {
+  $curColor: map-get($color-map, $key);//
+  $color-base: #fff;
+  @if $level < 0{ // color is darker if level is <0, so set the color base to black instead.
+      $color-base: #000;
+      $level: -1 * $level; //make level positive so the mix function doesnt cry blood.
+  }
+  @warn $curColor;
+  @return mix($color-base, $curColor, $level * $color-interval); // warp color to the right shade
+
+  @if map-key-exists($opacity-map, $opacity) { //get opacity key if used.
+      $opacity: map-get($opacity-map, $opacity);
+  }
+
+  // Use rgba() to manipulate the color's alpha level
+  @return rgba($curColor, $opacity); //warp color to the right transparency.
 }
 
 
 
 
-
 @function color-alpha($name: 'primary', $opacity: 0) {
-    $color: color($name);
-
-    // Get the named opacity level, if it exists
-    @if map-key-exists($opacity-map, $opacity) {
-        $opacity: map-get($opacity-map, $opacity);
-    }
-
-    // Use rgba() to manipulate the color's alpha level
-    @return rgba($color, $opacity);
+    @return color($name, 0, $opacity);
 }
 
 // Example usage:
@@ -44,16 +49,8 @@ $opacity-map: (
 
 
 
-@function color-level($color-name: 'primary', $level: 0) {
-  $color: color($color-name);
-  $color-base: #fff;
-  @if $level < 0{ //oh shit we going down
-      $color-base: #000;
-      $level: -1 * $level; //make level positive so the mix function doesnt cry blood.
-  }
-
-
-  @return mix($color-base, $color, $level * $color-interval);
+@function color-level($color: 'primary', $level: 0) {
+    @return color($color, $level, 0);
 }
 //Ex:
 //$sometint: color-level('primary', 2);

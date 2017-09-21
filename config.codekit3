@@ -7,7 +7,7 @@
 		"uuidString": "82E33F93-A814-4F1B-87D6-600498F322B7"
 		}
 	],
-"creatorBuild": "25849",
+"creatorBuild": "25900",
 "files": {
 	"\/css\/main.css": {
 		"aP": 1,
@@ -57,6 +57,7 @@
 		},
 	"\/js\/min\/responsive-menu-min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/min\/min\/responsive-menu-min-min.js",
@@ -64,8 +65,19 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"\/js\/min\/scripts-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/min\/scripts-min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/js\/responsive-menu.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/min\/responsive-menu-min.js",
@@ -75,6 +87,7 @@
 		},
 	"\/js\/scripts.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/min\/scripts-min.js",
@@ -114,16 +127,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/css\/_burger.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/css\/_burger-min.css",
-		"oF": 0,
-		"oS": 0
-		},
 	"\/sass\/main.scss": {
 		"aP": 1,
 		"bl": 1,
@@ -133,6 +136,19 @@
 		"ma": 1,
 		"oA": 0,
 		"oAP": "\/css\/main.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/style\/_buttons.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/css\/_buttons.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -267,6 +283,12 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/single.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/single.php",
+		"oF": 0
+		},
 	"\/style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -290,8 +312,8 @@
 	},
 "projectAttributes": {
 	"creationDate": 512168680,
-	"displayValue": "Eris",
-	"displayValueWasSetByUser": 0,
+	"displayValue": "Eris - Dev",
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-daenerys"
 	},
 "projectSettings": {
@@ -696,6 +718,10 @@
 			"active": 0,
 			"optionString": "{'setWithoutGet': true, 'getWithoutSet': false}"
 			},
+		"array-bracket-newline": {
+			"active": 0,
+			"optionString": "{'multiline': true, 'minItems': null}"
+			},
 		"array-bracket-spacing": {
 			"active": 0,
 			"optionString": "'never', {'singleValue': false, 'objectsInArrays': false, 'arraysInArrays': false}"
@@ -703,6 +729,10 @@
 		"array-callback-return": {
 			"active": 0,
 			"optionString": ""
+			},
+		"array-element-newline": {
+			"active": 0,
+			"optionString": "'always'"
 			},
 		"arrow-body-style": {
 			"active": 0,
@@ -800,6 +830,10 @@
 			"active": 0,
 			"optionString": "'always', {'null': 'always'}"
 			},
+		"for-direction": {
+			"active": 0,
+			"optionString": ""
+			},
 		"func-call-spacing": {
 			"active": 0,
 			"optionString": "'never'"
@@ -819,6 +853,10 @@
 		"generator-star-spacing": {
 			"active": 0,
 			"optionString": "{'before': true, 'after': false}"
+			},
+		"getter-return": {
+			"active": 0,
+			"optionString": "{'allowImplicit': false}"
 			},
 		"global-require": {
 			"active": 0,
@@ -947,6 +985,10 @@
 		"no-bitwise": {
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
+			},
+		"no-buffer-constructor": {
+			"active": 0,
+			"optionString": ""
 			},
 		"no-caller": {
 			"active": 0,
@@ -1492,6 +1534,10 @@
 			"active": 0,
 			"optionString": "{'blocks': 'always', 'switches': 'always', 'classes': 'always'}"
 			},
+		"padding-line-between-statements": {
+			"active": 0,
+			"optionString": "{blankLine: 'always', prev:'*', next:'return'}"
+			},
 		"prefer-arrow-callback": {
 			"active": 0,
 			"optionString": ""
@@ -1560,6 +1606,10 @@
 			"active": 0,
 			"optionString": "{'before': false, 'after': true}"
 			},
+		"semi-style": {
+			"active": 0,
+			"optionString": "'last'"
+			},
 		"sort-imports": {
 			"active": 0,
 			"optionString": "{'ignoreCase': false, 'ignoreMemberSort': true, 'memberSyntaxSortOrder': ['none', 'all', 'multiple', 'single']}"
@@ -1599,6 +1649,10 @@
 		"strict": {
 			"active": 0,
 			"optionString": "'safe'"
+			},
+		"switch-colon-spacing": {
+			"active": 0,
+			"optionString": "{'after': true, 'before': false}"
 			},
 		"symbol-description": {
 			"active": 0,
@@ -2232,6 +2286,7 @@
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
+	"susyVersion": 3,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
 		"ascii-only": {

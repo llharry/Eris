@@ -1,0 +1,8 @@
+@mixin centerChildren(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin deCenter(){
+    display: inline-block;
+}

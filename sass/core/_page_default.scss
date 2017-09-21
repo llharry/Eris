@@ -2,12 +2,23 @@ body{
     background-color: color('background');
 }
 
+
+.headerBar{
+    .container{
+        @include col(1);
+        .imageContainer{
+            img{
+                padding: 0;
+            }
+        }
+    }
+}
 //NAVIGATION
 $nav-height: 50px;
 .nav{
-    @include col(1);
     background-color: color-level('primary', -6);
     .menu{
+        @include col(1);
         ul{
             padding: 0;
             list-style: none;
@@ -117,16 +128,22 @@ $nav-height: 50px;
 //END NAVIGATION
 
 .content{
+    @include col(1);
+    background-color: color('foreground');
     .title{
         margin-top: 6px;
         background-color: color('secondary');
         padding: $default-padding;
         color: color('bodyinvert');
     }
-    @include col(1);
-    background-color: color('foreground');
-    .pageContent{
+    .defaultPageContent{
+        @include col(60,30);
+        .pageContent{
             padding: 12px;
+        }
+        .pageSidebar{
+            padding: 12px;
+        }
     }
 }
 
@@ -136,7 +153,7 @@ $nav-height: 50px;
 
 .footerBar{
     background-color: color('background');
-    color: color('body-invert');
+    color: color('bodyinvert');
     @include col(4,$margin: 6px);
     padding: 12px;
     padding-top: 36px;
